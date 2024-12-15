@@ -34,7 +34,7 @@ catch(PDOException $e){
 </head>
 <body>
 <div class="container mx-auto p-4">
-    <h1 class="text-2xl font-bold text-center mb-6" >List des Etudiants Inscrits</h1>
+    <h1 class="text-2xl font-bold text-center mb-6" >Liste des Etudiants Inscrits</h1>
 
     <div class="overflow-x-auto">
         <table class="table table-zebra w-full">
