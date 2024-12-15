@@ -53,10 +53,10 @@
                     </div>  
 
                     <!-- submit -->
-                    <div class="form-control w-full max-w-xs mt-6">
-                        <button class="btn btn-primary">S'inscrire</button>
-
-                    </div>
+                    <div class="form-control w-full max-w-xs mt-6 flex flex-row gap-2">
+                        <button type="submit" class="btn btn-primary flex-1">S'inscrire</button>
+                        <button type="reset" class="btn btn-error flex-1">Annuler</button>
+ </div>
 
                 </form>
             </div>

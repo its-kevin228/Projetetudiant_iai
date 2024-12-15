@@ -9,9 +9,6 @@ try{
     $nationalite = $_POST['nationalite'];
 
     $sql="INSERT INTO etudiant (nomEtud, prenomEtud, sexe, Nationalite) VALUES (:nom, :prenom, :sexe, :nationalite)";
-    $req=$db->prepare($sql);
-    $req->execute(['nom'=>$nom, 'prenom'=>$prenom, 'sexe'=>$sexe, 'nationalite'=>$nationalite]);
-    echo "Inscription réussie";
 }
 catch(PDOException $e){
     echo "Erreur de connexion :".$e->getMessage();
