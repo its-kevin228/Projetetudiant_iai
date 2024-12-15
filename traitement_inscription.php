@@ -21,6 +21,7 @@ catch(PDOException $e){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
     <title>Traitement d'inscription</title>
 </head>
 <body>
@@ -51,13 +52,7 @@ catch(PDOException $e){
              echo "<td>".$etudiants["prenomEtud"]."</td>";
              echo "<td>".$etudiants["sexe"]."</td>";
              echo "<td>".$etudiants["Nationalite"]."</td>";
-             echo "<td>
-             <button class='btn btn-sm btn-info'>Modifier</button>
-             <button class='btn btn-sm btn-error'>Supprimer</button>
-           </td>";
              echo "</tr>";
- 
- 
             }
            }
            catch(PDOException $e){
@@ -69,6 +64,11 @@ catch(PDOException $e){
 
         </table>
 
+    </div>
+    <div class="flex justify-center mt-6">
+        <a href="inscription.php" class="btn btn-primary">
+            Ajouter un étudiant
+        </a>
     </div>
 
 </div>

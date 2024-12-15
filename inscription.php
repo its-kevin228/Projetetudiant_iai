@@ -54,9 +54,9 @@
 
                     <!-- submit -->
                     <div class="form-control w-full max-w-xs mt-6 flex flex-row justify-between">
-    <button type="submit" class="btn btn-primary w-[50%]">S'inscrire</button>
-    <button type="reset" class="btn btn-error w-[50%]">Annuler</button>
-</div>
+                        <button type="submit" class="btn btn-primary w-[50%]">S'inscrire</button>
+                        <button type="reset" class="btn btn-error w-[50%]">Annuler</button>
+                    </div>
                 </form>
             </div>
 
