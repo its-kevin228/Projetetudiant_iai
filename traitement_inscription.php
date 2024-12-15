@@ -45,11 +45,26 @@ catch(PDOException $e){
                 <?php
             include 'Connexion.php';
 
+           try{
             $stmp=$db->query('SELECT * FROM etudiant order by matricule DESC');
-           while($etudiants=$stmp->fetch(PDO::FETCH_ASSOC)){
-            echo "  "
-
-
+            while($etudiants=$stmp->fetch(PDO::FETCH_ASSOC)){
+             echo "<tr>";
+             echo "<td>".$etudiants["matricule"]."</td>";
+             echo "<td>".$etudiants["nomEtud"]."</td>";
+             echo "<td>".$etudiants["prenomEtud"]."</td>";
+             echo "<td>".$etudiants["sexe"]."</td>";
+             echo "<td>".$etudiants["Nationalite"]."</td>";
+             echo "<td>
+             <button class='btn btn-sm btn-info'>Modifier</button>
+             <button class='btn btn-sm btn-error'>Supprimer</button>
+           </td>";
+             echo "</tr>";
+ 
+ 
+            }
+           }
+           catch(PDOException $e){
+            echo "Erreur de connexion :".$e->getMessage();
            }
 
                 ?>
