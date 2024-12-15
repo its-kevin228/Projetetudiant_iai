@@ -13,6 +13,7 @@
 
                 
                 <form action="traitement_inscription.php" method="post">
+                    
                     <!-- Nom -->
                     <div class="form-control w-full max-w-xs">
                         <label class="label">
