@@ -53,7 +53,7 @@
                     </div>  
 
                     <!-- submit -->
-                    <div class="form-control w-full max-w-xs mt-6 flex flex-row gap-4">
+                    <div class="form-control w-full max-w-xs mt-6 flex flex-row gap-8">
                         <button type="submit" class="btn btn-primary flex-1">S'inscrire</button>
                         <button type="reset" class="btn btn-error flex-1">Annuler</button>
  </div>
