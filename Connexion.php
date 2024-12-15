@@ -1,12 +1,9 @@
 <?php
-try {
-    $db=new PDO('mysql:host=localhost;dbname=gestetud', 'root', '');
-    echo "Connexion établie avec succès";
-}
-catch (PDOException $e){
-    echo "Erreur de connexion :".$e->getMessage();
-}
 
+//connexion a la base de données
+    $db=new PDO('mysql:host=localhost;dbname=gestetud', 'root', '');
+
+//     //extraction des données de la base de données
 // $req = $db->query('SELECT * FROM etudiant');
 
 // $etudiants = $req->fetchAll(PDO::FETCH_ASSOC);
