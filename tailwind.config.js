@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./**/*.{html,js,php}"],
   daisyui: {
-    themes: ["light", "night", "cupcake"],
+    themes: ["light", "night", "lemonade"],
   },
   plugins: [
     require('daisyui'),
