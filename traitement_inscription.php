@@ -9,6 +9,14 @@ try{
     $nationalite = $_POST['nationalite'];
 
     $sql="INSERT INTO etudiant (nomEtud, prenomEtud, sexe, Nationalite) VALUES (:nom, :prenom, :sexe, :nationalite)";
+    //preparer et executer la requete
+    $stmp=$db->prepare($sql);
+    $stmp->execute([
+        ':nom'=>$nom,
+        ':prenom'=>$prenom,
+        ':sexe'=>$sexe,
+        ':nationalite'=>$nationalite]);
+    
 }
 catch(PDOException $e){
     echo "Erreur de connexion :".$e->getMessage();
@@ -44,7 +52,7 @@ catch(PDOException $e){
             include 'Connexion.php';
 
            try{
-            $stmp=$db->query('SELECT * FROM etudiant order by matricule DESC');
+            $stmp=$db->query('SELECT * FROM etudiant order by matricule ASC');
             while($etudiants=$stmp->fetch(PDO::FETCH_ASSOC)){
              echo "<tr>";
              echo "<td>".$etudiants["matricule"]."</td>";
