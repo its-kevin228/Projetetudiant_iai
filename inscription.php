@@ -7,6 +7,7 @@
     <title>inscription</title>
 </head>
 <body>
+    
     <div class="container mx-auto p-4 ">
         <div class="card w-96 bg-base-100 shadow-xl mx-auto mt-10">
             <div class="card-body">
@@ -20,6 +21,7 @@
                         <label class="label">
                                 <span class="label-text">Nom</span>
                             </label>
+
                             <input type="text" name="nom" placeholder="Entrez votre nom" class="input input-bordered w-full max-w-xs" required />
                     
                     </div>
