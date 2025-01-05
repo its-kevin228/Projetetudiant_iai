@@ -38,25 +38,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en" data-theme="lemonade">
+<html lang="fr" data-theme="lemonade">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Modifier Étudiant</title>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-100 font-sans">
 
-    <div class="max-w-4xl mx-auto p-6">
-        <div class="bg-white shadow-2xl rounded-lg p-8 border border-gray-200">
-            <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Modifier Étudiant</h1>
+    <div class="max-w-lg mx-auto p-6">
+        <div class="bg-white rounded-lg shadow-md p-8 border border-gray-300">
+            <h1 class="text-2xl font-semibold text-center text-gray-800 mb-6">Modifier Étudiant</h1>
             <form method="POST" class="space-y-6">
 
                 <!-- Champ Nom -->
                 <div class="flex flex-col">
                     <label for="nom" class="text-lg font-medium text-gray-700">Nom :</label>
                     <input type="text" name="nom" id="nom" value="<?= htmlspecialchars($etudiant['nomEtud']) ?>" 
-                        class="mt-2 px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition duration-200" 
+                        class="mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-200" 
                         required>
                 </div>
 
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="flex flex-col">
                     <label for="prenom" class="text-lg font-medium text-gray-700">Prénom :</label>
                     <input type="text" name="prenom" id="prenom" value="<?= htmlspecialchars($etudiant['prenomEtud']) ?>" 
-                        class="mt-2 px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition duration-200" 
+                        class="mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-200" 
                         required>
                 </div>
 
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="flex flex-col">
                     <label for="sexe" class="text-lg font-medium text-gray-700">Sexe :</label>
                     <select name="sexe" id="sexe" 
-                        class="mt-2 px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition duration-200" 
+                        class="mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-200" 
                         required>
                         <option value="M" <?= $etudiant['sexe'] == 'Masculin' ? 'selected' : '' ?>>Masculin</option>
                         <option value="F" <?= $etudiant['sexe'] == 'Féminin' ? 'selected' : '' ?>>Féminin</option>
@@ -83,18 +83,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="flex flex-col">
                     <label for="nationalite" class="text-lg font-medium text-gray-700">Nationalité :</label>
                     <input type="text" name="nationalite" id="nationalite" value="<?= htmlspecialchars($etudiant['Nationalite']) ?>" 
-                        class="mt-2 px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition duration-200" 
+                        class="mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-200" 
                         required>
                 </div>
 
                 <!-- Boutons -->
-                <div class="flex justify-between items-center mt-8">
+                <div class="flex justify-between items-center mt-6">
                     <button type="submit" 
-                        class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+                        class="px-6 py-2 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200">
                         Modifier
                     </button>
                     <a href="../traitement_inscription.php" 
-                        class="px-6 py-3 bg-gray-500 text-white rounded-lg shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-200">
+                        class="px-6 py-2 bg-gray-500 text-white rounded-lg shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-200">
                         Annuler
                     </a>
                 </div>

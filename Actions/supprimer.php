@@ -1,5 +1,5 @@
 <?php
-include 'Connexion.php';
+include __DIR__ . '/../Connexion.php'; 
 
 if (isset($_GET['matricule'])) {
     $matricule = $_GET['matricule'];
@@ -7,7 +7,7 @@ if (isset($_GET['matricule'])) {
         $stmt = $db->prepare("DELETE FROM etudiant WHERE matricule = :matricule");
         $stmt->execute([':matricule' => $matricule]);
 
-        header("Location: index.php");
+        header("Location: ../traitement_inscription.php");
         exit;
     } catch (PDOException $e) {
         die("Erreur : " . $e->getMessage());
